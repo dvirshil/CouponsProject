@@ -181,7 +181,7 @@ public class CompanyDBDAO implements CompanyDAO {
 				passwordMatchcompName= true;
 			}
 		} catch (SQLException e) {
-			throw new Exception("Cannot login compName to BD");
+			throw new Exception("Cannot login as company;"+ compName+" to BD");
 		}
 		
 		pool.returnConnection(con);

@@ -3,8 +3,40 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Admin Page</title>
+<link rel="stylesheet" type="text/css" href="css/Style.css">
+<script src="angular/angular.min.js"></script>
+<script src="jquery/jquery-3.2.1.min.js"></script>
+<!--  <script type="text/javaScript" src="adminController.js"></script>-->
 </head>
-<body>
+<div ng-app="couponSystem">
 
-</body>
+	<body>
+		<header class="header">
+			<h1>Hello, Welcome to admin control page</h1>
+			<hr />
+		</header>
+		<div style="text-align: center;">
+			<button type="button" onclick="creatCompany()">Create Company</button>
+			<br> <br>
+			<button type="button" onclick="removeCompany()">Remove Company</button>
+			<br> <br>
+			<button type="button" onclick="updateCompany()">Update Company</button>
+			<br> <br>
+			<button type="button" onclick="getCompany()">Get Company</button>
+			<br> <br>
+			<button type="button" onclick="getAllCompanes()">Get All Companies</button>
+			<br> <br>
+			<button type="button" onclick="creatCustomer()">Create Customer</button>
+			<br> <br>
+			<button type="button" onclick="removeCustomer()">Remove	Customer</button>
+			<br> <br>
+			<button type="button" onclick="updateCustomer()">Update	Customer</button>
+			<br> <br>
+			<button type="button" onclick="getCustomer()">Get Customer</button>
+			<br> <br>
+			<button type="button" onclick="getAllCustomer()">Get All Customer</button>
+			<br> <br>
+
+		</div>
+	</body>
 </html>

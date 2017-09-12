@@ -25,7 +25,7 @@ public class Servlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	private CouponSystemSingelton system;
-	DataVallidation dataValid;
+	CompanyDBDAO companyDBDAO=new CompanyDBDAO();
 	
 	public Servlet() {
         super();
@@ -72,15 +72,12 @@ public class Servlet extends HttpServlet {
 						
 					case COMPANY:
 						request.getRequestDispatcher("company.html").forward(request, response);	
-						break;
-						/*if(dataValid.cheackCompany(username, password)) {
+						/*if(companyDBDAO.login(username, password)) {
 						request.getRequestDispatcher("company.html").forward(request, response);	
-						}
-						else {
+						}else {
 							response.sendRedirect("login.html");
-						}
 						break;
-						*/
+						}*/
 					case CUSTOMER:
 						request.getRequestDispatcher("customer.html").forward(request, response);
 						break;
