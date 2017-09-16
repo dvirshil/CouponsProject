@@ -15,7 +15,7 @@
 * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
 
 header h1{
-	color:#0000ff;
+	color:#f0f8ff;
 	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 	
 }
@@ -119,8 +119,10 @@ button {
 	color:#ffffff;
 	font-family:Arial;
 	font-size:20px;
-	padding:30px 120px;
+	padding:30px 150px;
 	text-decoration:none;
+	width: 30%;
+	
 }
 .Button:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #7892c2));
@@ -143,6 +145,6 @@ table{
 	margin: -150px 0 0 -150px;
 	width:300px;
 	height:300px;
-	overflow: hidden;
+	overflow: scrool;
 	text-align:center;
 }
