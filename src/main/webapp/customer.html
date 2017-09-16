@@ -6,25 +6,104 @@
 <link rel="stylesheet" type="text/css" href="css/Style.css">
 <script src="angular/angular.min.js"></script>
 <script src="jquery/jquery-3.2.1.min.js"></script>
-<!--  <script type="text/javascript" src="customerController.js"></script>-->
+<script type="text/javaScript" src="js/adminController.js"></script>
 
+<div ng-app="couponSystem"></div>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<div ng-app="couponSystem">
+<body>
 
-	<body >
-		<header class="header">
-			<h1>Hello {{custName}}, Welcome to your personal page</h1>
-			<hr />
-		</header>
-			<div style="text-align:center;">
-		<button type="button" onclick="purchasecoupon()">Purchase Coupon</button>
-		</br>
-		<button type="button" onclick="getallpurchasedcoupons()">Get All Purchased Coupons</button>
-		</br>
-		<button type="button" onclick="getallpurchasecouponsbytype()">Get All Purchase Coupons By Type</button>
-		</br>
-		<button type="button" onclick="getallpurchasecouponsbyprice()">Get All Purchase Coupons By Price</button>
-		</br>
+	<header class="header">
+		<h1 style="text-align: center;">Hello, Welcome to Customer control
+			page</h1>
+		<hr />
+	</header>
+		<div style="text-align: center;">
+		<button type="button" id="purchasecoupon" data-toggle="modal"
+			data-target="#myModal1" onclick="purchasecoupon() ">Purchase Coupon
+			</button>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal1" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<br>
+						<form method="post" name="myForm">
+							<div>
+								<label>Coupon Id</label> <input type="text" name="couponId" id="couponId"
+									required="required" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br> <br>
+				<div style="text-align: center;">
+		<button type="button" id="getallpurchasedcoupons" data-toggle="modal"
+			data-target="#myModal2" onclick="getallpurchasedcoupons() ">Get All Purchased Coupons
+			</button>
+		<br> <br>
+		
+		
+				<div style="text-align: center;">
+		<button type="button" id="getallpurchasecouponsbytype" data-toggle="modal"
+			data-target="#myModal3" onclick="getallpurchasecouponsbytype() ">Get All Purchase Coupons By Type
+			</button>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal3" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<br>
+						<form method="post" name="myForm">
+							<div>
+								<label>Coupon Type</label> <input type="text" name="Type" id="couponType"
+									required="required" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br> <br>
+		
+						<div style="text-align: center;">
+		<button type="button" id="getallpurchasecouponsbyprice" data-toggle="modal"
+			data-target="#myModal4" onclick="getallpurchasecouponsbyprice() ">Get All Purchase Coupons By Price
+			</button>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal4" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<br>
+						<form method="post" name="myForm">
+							<div>
+								<label>Coupon price</label> <input type="text" name="Type" id="price"
+									required="required" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br> <br>
 			</div>
 	</body>
 </html>
